@@ -1,0 +1,124 @@
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Ubuntu Mono', monospace;
+    }
+    
+    body::before {
+        background: linear-gradient(140deg, rgb(241, 27, 206), rgb(68, 97, 224));
+        content: " ";
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+    }
+    
+    .center {
+        border: 2px solid #ff0000;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        color: black;
+        width: 400px;
+        border-radius: 10px;
+        background-color: whitesmoke;
+    }
+    
+    .center h1 {
+        text-align: center;
+        border-bottom: 2px solid silver;
+        padding-bottom: 20px;
+    }
+    
+    .textfeild {
+        position: relative;
+        margin: 30px 0px;
+        border-bottom: 2px solid silver;
+    }
+    
+    form {
+        padding: 0px 40px;
+        box-sizing: border-box;
+    }
+    
+    .textfeild input {
+        width: 100%;
+        border: 0px;
+        height: 40px;
+        padding: 0px 5px;
+        outline: none;
+        font-size: 16px;
+        background-color: whitesmoke;
+    }
+    
+    .textfeild label {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        color: silver;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    
+    .textfeild span::after {
+        content: " ";
+        position: absolute;
+        width: 0%;
+        background-color: #4461e0;
+        height: 2px;
+        top: 40px;
+        transition: 0.5s;
+        z-index: 2;
+    }
+    
+    .textfeild input:focus~label,
+    .textfeild input:valid~label {
+        top: -5px;
+        color: #4461e0;
+    }
+    
+    .textfeild input:focus~span::after,
+    .textfeild input:valid~span::after {
+        width: 100%;
+    }
+    
+    .forgot {
+        transform: translateY(-50%);
+        text-align: center;
+    }
+    
+    input[type="submit"] {
+        width: 80%;
+        height: 30px;
+        text-align: center;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20PX;
+        background-color: #4461e0;
+        outline: none;
+        border: none;
+    }
+    
+    .signup_link p {
+        text-align: center;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #2f4bc9;
+        color: rgb(43, 43, 43);
+    }
+    
+    a {
+        text-decoration: none;
+        color: #4461e0;
+    }
+    
+    a:visited {
+        color: #4461e0;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
